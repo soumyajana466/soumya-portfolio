@@ -360,7 +360,8 @@ export default function HomePage() {
     setStatus("Sending...");
 
     try {
-      const response = await fetch("http://localhost:5000/api/contact", {
+      const api = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+      const response = await fetch(`${api}/api/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -470,7 +471,7 @@ export default function HomePage() {
                 Contact
               </a>
               <a
-                href="http://localhost:5000/api/admin/cv/download"
+                href={`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000"}/api/admin/cv/download`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="nav-link"

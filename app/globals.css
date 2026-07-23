@@ -1216,6 +1216,10 @@ footer a {
     padding: 0 16px;
   }
 
+  .nav-links-open .theme-toggle-btn:hover {
+    transform: scale(1.02);
+  }
+
   .nav-links-open .nav-link::after {
     display: none;
   }

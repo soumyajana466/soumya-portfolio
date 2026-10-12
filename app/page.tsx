@@ -1,6 +1,9 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import { getApiUrl } from "@/app/lib/api";
+
+const API_URL = getApiUrl();
 
 const PROJECTS = [
   {
@@ -110,7 +113,7 @@ export default function HomePage() {
   useEffect(() => {
     const logVisit = async () => {
       try {
-        const api = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+        const api = API_URL;
         await fetch(`${api}/api/analytics/visit`, {
           method: "POST",
           headers: {
@@ -172,7 +175,7 @@ export default function HomePage() {
   useEffect(() => {
     const fetchAvatar = async () => {
       try {
-        const api = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+        const api = API_URL;
         const res = await fetch(`${api}/api/admin/avatar`);
         const data = await res.json();
         if (data && data.url) {
@@ -360,7 +363,7 @@ export default function HomePage() {
     setStatus("Sending...");
 
     try {
-      const api = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+      const api = API_URL;
       const response = await fetch(`${api}/api/contact`, {
         method: "POST",
         headers: {
@@ -471,7 +474,7 @@ export default function HomePage() {
                 Contact
               </a>
               <a
-                href={`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000"}/api/admin/cv/download`}
+                href={`${API_URL}/api/admin/cv/download`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="nav-link"

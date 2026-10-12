@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState, useMemo } from "react";
+import { getApiUrl } from "@/app/lib/api";
 
-const API = process.env.NEXT_PUBLIC_API_URL!;
+const API = getApiUrl();
 
 type Message = {
   id: number;

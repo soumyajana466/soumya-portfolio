@@ -379,6 +379,7 @@ section[id] {
 
 .hero-title {
   font-size: clamp(32px, 4vw, 40px);
+  font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.03em;
   margin-bottom: 8px;

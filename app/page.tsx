@@ -10,24 +10,24 @@ const PROJECTS = [
     id: 1,
     title: "Expenses Tracker",
     category: "Full-stack",
-    desc: "A comprehensive expense tracking application built with Ruby on Rails that helps users manage their personal finances, track spending patterns, and visualize budget data through an intuitive interface.",
-    tags: ["Ruby on Rails", "Ruby", "SQL", "MVC"],
+    desc: "A full-stack personal finance application built with Ruby on Rails adhering to MVC architecture. Implemented secure user authentication with Devise and session management, alongside complete CRUD operations for tracking expenses, categorizing transactions, and setting monthly budgets. Designed a normalized PostgreSQL relational schema with indexed queries to calculate spending breakdowns and balance summaries in real time.",
+    tags: ["Ruby on Rails", "Ruby", "PostgreSQL", "SQL", "MVC"],
     sourceLink: "https://github.com/soumyajana466/expenses_tracker.git",
   },
   {
     id: 2,
     title: "Real Time Chat Application",
     category: "Full-stack",
-    desc: "A real-time messaging platform built with React and Node.js that enables users to chat instantly and share documents. Powered by Socket.io for real-time communication, PostgreSQL for data persistence, and Firebase for enhanced features.",
-    tags: ["React", "Node.js", "Socket.io", "PostgreSQL", "Firebase"],
+    desc: "A full-stack real-time messaging platform built with Node.js, Express, and React. Implemented bidirectional, low-latency event-driven communication using Socket.io for instant messaging, live typing indicators, and user online/offline status tracking. Persisted chat history, channels, and user relations in PostgreSQL, and integrated Firebase Storage for seamless media and file sharing.",
+    tags: ["React", "Node.js", "Socket.io", "PostgreSQL", "Firebase", "SQL"],
     sourceLink: "https://github.com/soumyajana466/real_time_chat_application",
   },
   {
     id: 3,
     title: "Job Finder Application",
     category: "Full-stack",
-    desc: "A full-stack job finder platform that helps users discover their dream jobs and internships through a short and secured process. Built with React, Node.js, and MongoDB to streamline job applications and boost career opportunities.",
-    tags: ["React", "Node.js", "MongoDB", "JavaScript"],
+    desc: "A full-stack career platform built with Node.js, Express, and MongoDB paired with a React frontend. Engineered RESTful backend APIs featuring parameterized search and filtering by role, salary, and location, combined with pagination and indexing. Implemented a secure end-to-end applicant flow with JWT authentication for resume submissions, candidate status tracking, and recruiter job posting management.",
+    tags: ["React", "Node.js", "MongoDB", "Express", "REST API", "JWT"],
     sourceLink: "https://github.com/soumyajana466/final-year-project-job-finder-using-react.git",
   },
 ];
@@ -68,7 +68,7 @@ export default function HomePage() {
   const jokeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   // Typewriter effect states
-  const words = ["Junior Software Engineer", "Backend & Node.js Developer", "Database Schema Designer", "API Architect"];
+  const words = ["Software Engineer", "Backend & Node.js Developer", "Database Schema Designer", "API Architect"];
   const [wordIndex, setWordIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -543,12 +543,12 @@ export default function HomePage() {
                 <span className="pill-dot"></span>
                 <span>Open to interesting backend work</span>
               </div>
-              <h1 className="hero-title" style={{ minHeight: "2.4em" }}>
+              <p className="hero-title" style={{ minHeight: "2.4em" }}>
                 <span className="hero-highlight" style={{ display: "inline-block" }}>
                   {currentText}
                 </span>
                 <span className="typewriter-cursor" aria-hidden="true">|</span>
-              </h1>
+              </p>
               <p className="hero-subtitle">
                 Backend Engineer specializing in building scalable Node.js services,
                 robust database architectures, and clean, high-performance REST APIs
@@ -588,7 +588,7 @@ export default function HomePage() {
                 </div>
                 <div className="meta-item">
                   <span>
-                    Currently working as Junior Software Engineer at GEOGO
+                    Currently working as Software Engineer at GEOGO
                     Technologies
                   </span>
                 </div>
@@ -623,7 +623,7 @@ export default function HomePage() {
                   )}
                   <div className="profile-text">
                     <h1>Soumya Jana</h1>
-                    <p>Junior Software Engineer · Backend</p>
+                    <p>Software Engineer · Backend</p>
                     <small>Node.js · Express · SQL · JavaScript</small>
                   </div>
                 </div>
@@ -673,7 +673,7 @@ export default function HomePage() {
                     business logic that handles modern application demands.
                     <br />
                     <br />
-                    Currently working as a Junior Software Engineer, I spend my time
+                    Currently working as a Software Engineer, I spend my time
                     collaborating with front-end teams, designing clean RESTful APIs, and
                     tuning SQL query performance. I believe in clean code, robust error
                     handling, and proactive logging to make sure bugs are solved before they reach production.
@@ -792,7 +792,7 @@ export default function HomePage() {
                     <div className="timeline-dot"></div>
                   </div>
                   <div className="timeline-main">
-                    <h3>Junior Software Engineer · Backend</h3>
+                    <h3>Software Engineer · Backend</h3>
                     <h4>GEOGO Technologies</h4>
                     <p>
                       Working on backend services using Node.js, Express, and
